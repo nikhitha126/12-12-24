@@ -1,11 +1,7 @@
-amt = int(input("Enter actual amount: "))
-dep = 0
-balance = amt
-
-
 def val():
    p = '123'
    max_attempts = 3
+   global amt
 
    for attempt in range(max_attempts):
        pin = input("Enter pin: ")
@@ -18,6 +14,13 @@ def val():
            if remaining == 0:
                print("Try again after 24 hours")
                return
+   global amt
+   amt= int(input("Enter actual amount: "))
+   global dep
+   dep = 0
+   global balance
+   balance = amt
+
    print("1. Deposit")
    print("2. Withdraw")
    print("3. Balance")
